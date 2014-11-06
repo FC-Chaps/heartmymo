@@ -8,8 +8,8 @@ var before = lab.before;
 var after = lab.after;
 var expect = Code.expect;
 
-var server = require('./index.js');
-var twitterTools = require("./twit.js");
+var server = require('../server.js');
+var twitterTools = require("../twit.js");
 
 describe("The twitter module", function(){
 	
@@ -30,7 +30,7 @@ describe("The twitter module", function(){
 
 describe("Twitter module's validateTweets method", function(){
 	//Check its functionality
-	before(function(){
+	before(function(done){
 		var mockTweet = {
 			id: "123456789",
 			user: {
@@ -45,6 +45,7 @@ describe("Twitter module's validateTweets method", function(){
 			},
 			text: "abc"
 		}
+		done();
 	})
 	it("should return an object", function(done){
 		expect(twitterTools.validateTweets(mockTweet)).be.an.object();

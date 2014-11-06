@@ -5,4 +5,9 @@ var routes = require('./routes.js');
 var server = new Hapi.Server('localhost', 8000);
 
 server.route(routes);
-server.start();
+
+if(!module.parent){
+	server.start();
+}
+
+module.exports(server);
