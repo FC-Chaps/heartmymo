@@ -44,6 +44,18 @@ img {
       position: absolute;
       z-index: 999; }
 
+/* ==================================
+        Footer Section
+================================== */
+.footer div {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center; }
+  .footer div p {
+    color: #BBB; }
+    .footer div p a {
+      color: #FF7066; }
+
 /*
 ** Media Queries
 */
