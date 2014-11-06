@@ -1,3 +1,68 @@
+/* ==================================
+        Titles Section
+================================== */
+#title-wrapper h1 {
+  margin: 10px auto; }
 
+#donate-wrapper a {
+  display: block;
+  text-align: center;
+  background-color: orange;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  border-radius: 5%; }
+
+/* ==================================
+        Tabs 
+================================== */
+.nav li {
+  text-algn: center; }
+  .nav li.active a {
+    background-color: black;
+    border-radius: 1%; }
+
+/* ==================================
+        Content Section
+================================== */
+/* Site wide and general purpose */
+.content {
+  display: none; }
+  .content.active {
+    display: block; }
+  .content .post-wrapper .img-wrapper {
+    margin-top: 10px; }
+    .content .post-wrapper .img-wrapper:first-child {
+      margin-top: 20px; }
+    .content .post-wrapper .img-wrapper:last-child {
+      margin-bottom: 20px; }
+
+/*
+** Media Queries
+*/
+@media (max-width: 767px) {
+  #donate-wrapper a {
+    width: 100%;
+    margin: 10% auto;
+    padding: 10px 5px; }
+
+  .nav li {
+    width: 49.5%; }
+
+  .post-wrapper .img-wrapper .name-wrapper {
+    top: 0;
+    left: 10;
+    padding: 10px;
+    position: absolute;
+    z-index: 999; } }
+@media (min-width: 768px) {
+  .nav li {
+    width: 49.5%; }
+
+  .post-wrapper .img-wrapper img {
+    margin: 0 auto; }
+  .post-wrapper .img-wrapper .name-wrapper {
+    text-align: center;
+    margin-top: -50px;
+    padding: 10px 0; } }
 
 /*# sourceMappingURL=main.css.map */
