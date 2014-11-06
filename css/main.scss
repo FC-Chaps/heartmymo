@@ -2,29 +2,12 @@
 /* ==================================
         Titles Section
 ================================== */
-#title-wrapper {
-    h1 {
-        margin: 10px auto;
-    }
+#copy-wrapper {
+    height: 80%;
 }
-#donate-wrapper {
-    a {
-        display: block;
-        text-align :center;
-        background-color: orange;
-        -webkit-border-radius: 5%;
-        -moz-border-radius: 5%;
-        border-radius: 5%;
-        &:visited {
 
-        }
-        &:hover {
-            
-        }
-        &:active {
-
-        }
-    }
+#donate-button-wrapper {
+    padding: 0;
 }
 
 /* ==================================
@@ -32,11 +15,18 @@
 ================================== */
 .nav {
     li {
-        text-algn: center;  
+        text-align: center;
+        font-family: Helvetica, Sans-serif;
+        font-weight: 50;
+        font-size: 1.5em;
+        a {
+            border-radius: 0%;
+            color: gray;
+        }
         &.active {
             a {
-                background-color: black;
-                border-radius: 1%;
+                color: #EF4036;
+                background-color: white;
             }
         } 
     }
@@ -58,7 +48,7 @@
         .img-wrapper {
             margin-top: 10px;
             &:first-child {
-                margin-top: 20px;
+                margin-top: 40px;
             }
             &:last-child {
                 margin-bottom: 20px;
@@ -72,15 +62,18 @@
 ** Media Queries
 */
 
+/*xs*/
 @media ( max-width: 767px ) {
 
-    #donate-wrapper {
-        a {
-            width: 100%;
-            margin: 10% auto;
-                padding: 10px 5px;
-        }
+    #header-wrapper {
+        padding-top: 10%;
+        padding-bottom: 40px;
     }
+
+    #donate-button-wrapper {
+        // padding-top: 10%
+    }   
+
     .nav {
             li {
                 width: 49.5%;
@@ -100,7 +93,18 @@
 
 }
 
+/*sm*/
 @media ( min-width: 768px ) {
+    
+    #header-wrapper {
+        padding-top: 74px;
+        padding-bottom: 40px;
+    }
+
+    #donate-button-wrapper {
+        // padding-top: 35px;
+    } 
+
     .nav {
             li {
                 width: 49.5%;
@@ -120,3 +124,23 @@
     }
 }
 
+/*md*/
+@media ( min-width: 992px ) {
+    // .nav {
+    //         li {
+    //             width: 49.5%;
+    //         }
+    // }
+    // .post-wrapper {
+    //     .img-wrapper {
+    //         img {
+    //             margin: 0 auto;
+    //         }
+    //         .name-wrapper {
+    //             text-align: center;
+    //             margin-top: -50px;
+    //             padding: 10px 0;
+    //         }
+    //     }
+    // }
+}
