@@ -57,6 +57,10 @@ img {
             &:last-child {
                 margin-bottom: 20px;
             }
+            .name-wrapper {
+                position: absolute;
+                z-index: 999;
+            }
         }
     }
 }
@@ -89,8 +93,6 @@ img {
                 top: 0;
                 left: 10;
                 padding: 10px;
-                position: absolute;
-                z-index: 999;
             }
         }
     }
@@ -120,9 +122,9 @@ img {
                 margin: 0 auto;
             }
             .name-wrapper {
-                text-align: center;
-                margin-top: -50px;
-                padding: 10px 0;
+                top: 0;
+                left: 10;
+                padding: 20px;
             }
         }
     }
