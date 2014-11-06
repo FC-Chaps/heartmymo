@@ -1,0 +1,26 @@
+{
+  "name": "heartmymo",
+  "version": "1.0.0",
+  "description": "heartmymo =========",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FC-Chaps/heartmymo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FC-Chaps/heartmymo/issues"
+  },
+  "homepage": "https://github.com/FC-Chaps/heartmymo",
+  "devDependencies": {
+    "code": "^1.2.1",
+    "lab": "^5.0.1"
+  }
+}
