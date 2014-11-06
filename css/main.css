@@ -41,6 +41,18 @@ img {
     .content .post-wrapper .img-wrapper:last-child {
       margin-bottom: 20px; }
 
+/* ==================================
+        Footer Section
+================================== */
+.footer div {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center; }
+  .footer div p {
+    color: #BBB; }
+    .footer div p a {
+      color: #FF7066; }
+
 /*
 ** Media Queries
 */
