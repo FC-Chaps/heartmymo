@@ -10,4 +10,4 @@ if(!module.parent){
 	server.start();
 }
 
-module.exports(server);
+module.exports = server;

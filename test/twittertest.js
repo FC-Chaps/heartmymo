@@ -30,8 +30,9 @@ describe("The twitter module", function(){
 
 describe("Twitter module's validateTweets method", function(){
 	//Check its functionality
+	var mockTweet;
 	before(function(done){
-		var mockTweet = {
+		mockTweet = {
 			id: "123456789",
 			user: {
 				screen_name: "Willy"
@@ -39,7 +40,8 @@ describe("Twitter module's validateTweets method", function(){
 			entities: {
 				media: [
 					{
-						media_url: "www.test.com"
+						media_url: "www.test.com",
+						type: "photo"
 					}
 				]
 			},
@@ -47,6 +49,7 @@ describe("Twitter module's validateTweets method", function(){
 		}
 		done();
 	})
+
 	it("should return an object", function(done){
 		expect(twitterTools.validateTweets(mockTweet)).be.an.object();
 		done();
@@ -56,10 +59,10 @@ describe("Twitter module's validateTweets method", function(){
 		done();
 	})
 	it("should have correct properties", function(done){
-		expect(twitterTools.validateTweets(mockTweet)).to.have.property("id", "123456789");
-		expect(twitterTools.validateTweets(mockTweet)).to.have.property("username", "Willy");
-		expect(twitterTools.validateTweets(mockTweet)).to.have.property("image", "www.test.com");
-		expect(twitterTools.validateTweets(mockTweet)).to.have.property("body", "abc");
+		expect(twitterTools.validateTweets(mockTweet).id).to.equal("123456789");
+		expect(twitterTools.validateTweets(mockTweet).username).to.equal("Willy");
+		expect(twitterTools.validateTweets(mockTweet).image).to.equal("www.test.com");
+		expect(twitterTools.validateTweets(mockTweet).body).to.equal("abc");
 		done();
 	})
 })
