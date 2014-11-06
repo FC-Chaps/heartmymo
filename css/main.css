@@ -40,6 +40,9 @@ img {
       margin-top: 40px; }
     .content .post-wrapper .img-wrapper:last-child {
       margin-bottom: 20px; }
+    .content .post-wrapper .img-wrapper .name-wrapper {
+      position: absolute;
+      z-index: 999; }
 
 /*
 ** Media Queries
@@ -56,9 +59,7 @@ img {
   .post-wrapper .img-wrapper .name-wrapper {
     top: 0;
     left: 10;
-    padding: 10px;
-    position: absolute;
-    z-index: 999; } }
+    padding: 10px; } }
 /*sm*/
 @media (min-width: 768px) {
   #header-wrapper {
@@ -71,9 +72,9 @@ img {
   .post-wrapper .img-wrapper img {
     margin: 0 auto; }
   .post-wrapper .img-wrapper .name-wrapper {
-    text-align: center;
-    margin-top: -50px;
-    padding: 10px 0; } }
+    top: 0;
+    left: 10;
+    padding: 20px; } }
 /*md*/
 
 /*# sourceMappingURL=main.css.map */
