@@ -24,7 +24,8 @@
     "lab": "^5.0.1"
   },
   "dependencies": {
-    "hapi": "^7.3.0",
+    "hapi": "^7.4.0",
+    "hapi-mongodb": "^2.2.0",
     "twit": "^1.1.18"
   }
 }

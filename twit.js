@@ -1,35 +1,33 @@
 var twit = require('twit');
 var feed = new twit(require("./keys.js"));
-var stream = feed.stream('statuses/sample')
+var stream = feed.stream('statuses/filter', { track: 'movember' })
 
 module.exports = (function () {
 	return {
-		getTweets:  function (search, validator, number, callback){
-			feed.get("search/tweets", { q: search}, function (err, tweets) {
-				var tweet = tweets.statuses;
-				var tweetArray = [];
-				var i;
-
+		getTweets:  function (search, validator, number, res){
+			var tweetArray = [];
+			feed.get("search/tweets", { q: search, count: 10, filter: "images" }, function (err, tweets) {
 				if (err) {
 					throw err;
+				} else {
+					tweets.statuses.forEach(function (tweet) {
+						tweetArray.push(validator(tweet));
+						if(tweetArray.length === number) {
+							res(tweetArray);
+						}
+					})
 				}
-				for (i = 0; tweetArray.length < number; i++){ 
-					if(tweet[0] && tweet[i].entities && tweet[i].entities.media && tweet[i].entities.media[0].type === "photo"){
-						tweetArray.push(validator(tweet[i]));
-					};
-				}
-				callback(tweetArray);	
-			});
+			})
 		},
 		validateTweets: function (tweet){
-				var validTweet = {
+				var validatedTweet = {
 					id: tweet.id,
 					username: tweet.user.screen_name,
 					image: tweet.entities.media[0].media_url,
 					date: new Date(tweet.created_at),
 					body: tweet.text
 				};
-				return validTweet;
+				return validatedTweet;
 		}
 	}
 }());
