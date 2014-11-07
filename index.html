@@ -38,7 +38,12 @@
 
               <tabset>
                 <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                    <image-pane></image-pane>
+                  <div ng-show="tab.title === latest">
+                        <div ng-show="tab.active === true">
+                            <image-pane></image-pane>
+                        </div>
+                    </div>
+                    <!-- <image-pane></image-pane> -->
                 </tab>
               </tabset>
 
@@ -53,8 +58,6 @@
             <p id="footer-text">&copy; 2014 <br> a <a href="http://foundersandcoders.org">Founders & Coders</a> hack</p>
         </div>
     </div>
-
-
 
 
 </body>
