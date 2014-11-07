@@ -31,6 +31,9 @@ img {
             a {
                 color: #EF4036;
                 background-color: white;
+                &:hover {
+                    color: #EF4036;
+                }
             }
         } 
     }
@@ -58,8 +61,21 @@ img {
                 margin-bottom: 20px;
             }
             .name-wrapper {
+                color: white;
+                background-color: rgba(10,10,10,0.3);
+                padding: 10px;
+                margin: 20px;
                 position: absolute;
                 z-index: 999;
+                p {
+                    margin: 0px;
+                    a {
+                        color: white;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }
