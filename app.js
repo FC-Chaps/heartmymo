@@ -27,6 +27,30 @@ angular.module('app')
 	}]);
 
 angular.module('app')
+	.controller('LikedGetCtrl', ['$http', '$scope', function ($http, $scope) {
+		
+		var topTweets;
+		
+		$http.get(url + 'tweets/liked').success(function (data){
+			tweets = data;
+			$scope.topTweets = tweets;
+
+			console.log($scope.topTweets);	
+
+		});
+		
+		// $scope.like = function(){
+		// 	if($scope.details.hasOwnProperty('likes')){
+		// 		$scope.details[0].likes += 1;
+		// 	}
+		// 	else{
+		// 		$scope.details[0].likes = 1;
+		// 	}
+		// 	$http.post(url + 'tweets/liked', $scope.details); 
+		// };
+	}]);
+
+angular.module('app')
 	.controller('TabsDemoCtrl', function ($scope) {
 
 		$scope.tabs = [
@@ -51,3 +75,11 @@ angular.module('app')
   			templateUrl: 'image-pane.html'
 		};
 	});
+
+angular.module('app')
+.directive('imageTop', function(){
+	return {
+			restrict: 'E',
+			templateUrl: 'image-top.html'
+	};
+});
