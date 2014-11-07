@@ -36,25 +36,22 @@ img {
   display: none; }
   .content.active {
     display: block; }
-  .content .post-wrapper .img-wrapper {
-    margin-top: 10px; }
-    .content .post-wrapper .img-wrapper:first-child {
-      margin-top: 40px; }
-    .content .post-wrapper .img-wrapper:last-child {
-      margin-bottom: 20px; }
-    .content .post-wrapper .img-wrapper .name-wrapper {
-      color: white;
-      background-color: rgba(10, 10, 10, 0.3);
-      padding: 10px;
-      margin: 20px;
-      position: absolute;
-      z-index: 999; }
-      .content .post-wrapper .img-wrapper .name-wrapper p {
-        margin: 0px; }
-        .content .post-wrapper .img-wrapper .name-wrapper p a {
-          color: white; }
-          .content .post-wrapper .img-wrapper .name-wrapper p a:hover {
-            text-decoration: none; }
+
+.img-wrapper {
+  margin-top: 40px; }
+  .img-wrapper .name-wrapper {
+    color: white;
+    background-color: rgba(10, 10, 10, 0.3);
+    padding: 10px;
+    margin: 20px;
+    position: absolute;
+    z-index: 999; }
+    .img-wrapper .name-wrapper p {
+      margin: 0px; }
+      .img-wrapper .name-wrapper p a {
+        color: white; }
+        .img-wrapper .name-wrapper p a:hover {
+          text-decoration: none; }
 
 /* ==================================
         Footer Section

@@ -1,64 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
+
 <head>
     <meta charset="UTF-8">
     <title>HeartMyMo</title>
     <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no"/>
-    <link rel="icon" href="/assets/favicon.ico"/>
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="icon" href="/assets/MoAssets-HeartMyMo.png"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
+
+    <!-- display container -->
     <div class="container-fluid">
         
+        <!-- header wrapper -->
         <div class="row" id="header-wrapper">
+            
+            <!-- heart my mo logo wrapper -->
             <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3" class="title" id="left-header-wrapper">
                 <img class="img-responsive" src="/assets/MoAssets-HeartMyMo.png"/>
             </div>
+
+            <!-- donate now button wrapper -->
             <div class="col-xs-5 col-sm-4 col-md-3" class="title" id="right-header-wrapper">
-                <div id="copy-wrapper">
-                <!--     Heart My Mo is celebrating <a href="http://uk.movember.com">Movember</a> by pulling together all your #movember tweets and instas and letting the world choose its fave mo.<br><br><strong>Help us change the face of men's health</strong> -->
-                </div>
                 <div class="col-xs-7 col-xs-offset-5 col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3" id="donate-button-wrapper">
                     <a href="https://www.movember.com/uk/donate/payment/team_id/1724077"><img class="img-responsive" src="/assets/MoAssets-DonateNow.png"/></a>
                 </div>
             </div>
         </div>
 
+        <!-- tabs wrapper -->
         <div class="row" id="nav-wrapper">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#">latest</a></li>
-                    <li role="presentation"><a href="#">top 10</a></li>
-                </ul> 
+
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" ng-controller="TabsDemoCtrl">
+
+              <tabset>
+                <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                    <image-pane></image-pane>
+                </tab>
+              </tabset>
+
             </div>
+
         </div>
 
-    </div>
-    
-    <div class="container-fluid active content">
-        <div class="row post-wrapper">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 img-wrapper">
-                <img src="http://placehold.it/400&text=latest-img" alt="" class="img-responsive">
-                <div class="name-wrapper">
-                    <p class="username"><a href="https://www.twitter.com">@username123</a></p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="container-fluid content">
-        <div class="row post-wrapper">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 img-wrapper">
-                <img src="http://placehold.it/400&text=latest-img" alt="" class="img-responsive">
-                <div class="name-wrapper">
-                    <p class="username"><a href="https://www.twitter.com">@username123</a></p>
-                </div>
-            </div>
-            
-        </div>
     </div>
 
     <div class="container-fluid footer">
@@ -67,5 +54,12 @@
         </div>
     </div>
 
+
+
+
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
+<script src="app.js"></script>
 </html>
+

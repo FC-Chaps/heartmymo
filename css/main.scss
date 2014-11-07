@@ -51,35 +51,32 @@ img {
     &.active {
         display: block;
     }
-    .post-wrapper {
-        .img-wrapper {
-            margin-top: 10px;
-            &:first-child {
-                margin-top: 40px;
-            }
-            &:last-child {
-                margin-bottom: 20px;
-            }
-            .name-wrapper {
+}
+
+.img-wrapper {
+    margin-top: 40px;
+    .name-wrapper {
+        color: white;
+        background-color: rgba(10,10,10,0.3);
+        padding: 10px;
+        margin: 20px;
+        position: absolute;
+        z-index: 999;
+        p {
+            margin: 0px;
+            a {
                 color: white;
-                background-color: rgba(10,10,10,0.3);
-                padding: 10px;
-                margin: 20px;
-                position: absolute;
-                z-index: 999;
-                p {
-                    margin: 0px;
-                    a {
-                        color: white;
-                        &:hover {
-                            text-decoration: none;
-                        }
-                    }
+                &:hover {
+                    text-decoration: none;
                 }
             }
         }
-    }
+    }    
 }
+
+
+
+
 
 /* ==================================
         Footer Section
