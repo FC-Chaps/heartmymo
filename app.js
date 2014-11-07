@@ -53,13 +53,19 @@ angular.module('app')
 angular.module('app')
 	.controller('TabsDemoCtrl', function ($scope) {
 
-		$scope.active.latest = "true";
-		$scope.active.top10 = "false";
+		$scope.active = {
+			latest: true,
+			top10: false
+		};
+
+		// $scope.active.latest = "true";
+		// $scope.active.top10 = "false";
 		$scope.toggleActive = function() {
 			if($scope.active.latest === "true") {
 				$scope.active.latest = "false";
 				$scope.active.top10 = "true";
-			} else {
+			} 
+			else if ($scope.active.top10 === "true"){
 				$scope.active.latest = "true";
 				$scope.active.top10 = "false";
 			}
