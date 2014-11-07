@@ -53,6 +53,13 @@ img {
         .img-wrapper .name-wrapper p a:hover {
           text-decoration: none; }
 
+#username {
+  max-width: 50%;
+  display: inline-block; }
+
+#likebox {
+  max-width: 15px; }
+
 /* ==================================
         Footer Section
 ================================== */

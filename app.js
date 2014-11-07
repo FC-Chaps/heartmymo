@@ -1,4 +1,4 @@
-var url = 'http://localhost:8000/'
+var url = 'http://localhost:8000/';
 
 angular.module('app', ['ui.bootstrap']);
 
@@ -53,19 +53,7 @@ angular.module('app')
 angular.module('app')
 	.controller('TabsDemoCtrl', function ($scope) {
 
-		$scope.tabs = [
-		    { 
-		    	// latest tab
-		    	title:'latest',
-		    	content: 'Will'
-		    },
-
-		    { 
-		    	// top 10 tab
-		    	title:'top 10', 
-		    	content:'Coming soon' 
-		    }
-		];
+		$scope.tabs = [];
 	});
 
 angular.module('app')
